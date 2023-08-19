@@ -1,1 +1,250 @@
-/*# sourceMappingURL=main.css.map */
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css?family=Poppins&display=swap");
+body {
+  font-family: "Poppins";
+  margin: 0;
+}
+
+.navigation {
+  height: 70px;
+  background: #000;
+}
+
+.nav-container {
+  max-width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav-container .cartIcon {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 20px;
+}
+.nav-container .cartIcon img {
+  width: 25px;
+  height: 25px;
+}
+
+.brand {
+  padding-left: 20px;
+  line-height: 70px;
+  text-transform: uppercase;
+  font-size: 1.4em;
+}
+.brand a,
+.brand a:visited {
+  color: #fff;
+  text-decoration: none;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: end;
+}
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+nav ul.upperPart {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-bottom: 20px;
+}
+nav ul.upperPart li {
+  color: #fff;
+}
+nav ul.lower-part {
+  background: linear-gradient(to left, #1E2226 50%, #000000 100%);
+  border-radius: 25px;
+}
+nav ul li {
+  position: relative;
+}
+nav ul li a {
+  display: block;
+  padding: 0px 20px;
+  line-height: 50px;
+  color: #fff;
+  text-decoration: none;
+}
+nav ul li a:not(:only-child):after {
+  padding-left: 4px;
+  content: " ▾";
+}
+nav ul li ul {
+  background-color: #000;
+}
+nav ul li ul li {
+  min-width: 190px;
+}
+nav ul li ul li a {
+  padding: 15px;
+  line-height: 20px;
+}
+nav .searchIcon {
+  width: 50px;
+  height: 50px;
+  background-color: #FF461C;
+  border: 0;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+nav .searchIcon .fa {
+  color: #fff;
+}
+nav .nav-dropdown.searchField {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 99;
+  background-color: #fff;
+  border-radius: 25px;
+  background: linear-gradient(to left, #FF461C 0%, #FE7903 75%);
+}
+nav .nav-dropdown.searchField.show {
+  display: block;
+}
+nav .nav-dropdown.searchField.show.mobile-search {
+  display: none;
+}
+nav .nav-dropdown.searchField .advancedSearch {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 15px;
+}
+nav .nav-dropdown.searchField .advancedSearch input {
+  border: none;
+  width: 100%;
+  background: transparent;
+}
+nav .nav-dropdown.searchField .advancedSearch input:focus {
+  caret-color: white;
+  outline: none;
+}
+nav .nav-dropdown.searchField .advancedSearch input::-moz-placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #FEB27F;
+  opacity: 1;
+  /* Firefox */
+}
+nav .nav-dropdown.searchField .advancedSearch input::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #FEB27F;
+  opacity: 1;
+  /* Firefox */
+}
+nav .nav-dropdown.searchField .advancedSearch input:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: #FEB27F;
+}
+nav .nav-dropdown.searchField .advancedSearch input::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: #FEB27F;
+}
+nav .nav-dropdown.searchField .advancedSearch button {
+  text-wrap: nowrap;
+  background: transparent;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+nav .nav-dropdown.searchField .crossButton {
+  position: absolute;
+  right: 0px;
+  top: 10px;
+  opacity: 1;
+}
+nav .nav-dropdown.searchField .crossButton:before, nav .nav-dropdown.searchField .crossButton:after {
+  position: absolute;
+  left: 15px;
+  content: " ";
+  height: 33px;
+  width: 2px;
+  background-color: #FEB27F;
+}
+nav .nav-dropdown.searchField .crossButton:before {
+  transform: rotate(45deg);
+}
+nav .nav-dropdown.searchField .crossButton:after {
+  transform: rotate(-45deg);
+}
+
+.nav-dropdown {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
+}
+
+.nav-dropdown.show {
+  display: block;
+}
+
+.nav-mobile {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: #000;
+  height: 70px;
+  width: 70px;
+}
+
+.bannarImage img {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 16/9;
+}
+
+#nav-toggle {
+  position: absolute;
+  left: 18px;
+  top: 22px;
+  cursor: pointer;
+  padding: 10px 35px 16px 0px;
+}
+#nav-toggle span,
+#nav-toggle span:before,
+#nav-toggle span:after {
+  cursor: pointer;
+  border-radius: 1px;
+  height: 5px;
+  width: 35px;
+  background: #f8b500;
+  position: absolute;
+  display: block;
+  content: "";
+  transition: all 300ms ease-in-out;
+}
+#nav-toggle span:before {
+  top: -10px;
+}
+#nav-toggle span:after {
+  bottom: -10px;
+}
+#nav-toggle.active span {
+  background-color: transparent;
+}
+#nav-toggle.active span:before, #nav-toggle.active span:after {
+  top: 0;
+}
+#nav-toggle.active span:before {
+  transform: rotate(45deg);
+}
+#nav-toggle.active span:after {
+  transform: rotate(-45deg);
+}/*# sourceMappingURL=main.css.map */
