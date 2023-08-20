@@ -1,5 +1,7 @@
 let navList = document.querySelector('.nav-list.lower-part');
 
+
+//Search Field Visible Code
 function searchIcon() {
   if (window.innerWidth <= 799) {
     document.querySelector('.searchField.mobile-search').classList.add('show');
@@ -14,11 +16,10 @@ function searchIcon() {
   }
 }
 
+//NavList CLick Function
 navList.addEventListener('click', (e) => {
   let elementCapture = e.target.parentElement.querySelector('.nav-dropdown');
   let dropdownList = document.querySelectorAll('.show');
-
-  console.log(elementCapture);
 
   if (
     e.target.classList.contains('searchIcon') ||
@@ -32,11 +33,14 @@ navList.addEventListener('click', (e) => {
   } else {
     elementCapture.classList.toggle('show');
   }
+
   dropdownList.forEach((item) => {
     item.classList.remove('show');
   });
 });
 
+
+//Mobile Search Field
 document.querySelector('p.searchIcon').addEventListener('click', (e) => {
   if (
     e.target.classList.contains('searchIcon') ||
@@ -47,6 +51,8 @@ document.querySelector('p.searchIcon').addEventListener('click', (e) => {
   }
 });
 
+
+//Mobile Mega Menu
 document.querySelector('#nav-toggle').addEventListener('click', (e) => {
   e.target.parentElement.classList.toggle('active');
   document.querySelector('.nav-list').classList.toggle('active');
@@ -57,6 +63,8 @@ document.querySelector('#nav-toggle').addEventListener('click', (e) => {
   }
 });
 
+
+//Search Cross Icon
 document
   .querySelector('.mobile-search .crossButton')
   .addEventListener('click', (e) => {

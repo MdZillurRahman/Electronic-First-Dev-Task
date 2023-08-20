@@ -106,7 +106,7 @@ nav {
       }
 
       // Dropdown list
-      ul {
+      ul.nav-dropdown {
         background-color: $nav-background;
 
         li {
@@ -205,6 +205,7 @@ nav {
       right: 0px;
       top: 10px;
       opacity: 1;
+      cursor: pointer;
 
       &:before,
       &:after {
@@ -228,10 +229,6 @@ nav {
   }
 }
 
-// #FF461C
-// #FE7903
-
-
 .nav-dropdown {
   display: none;
   position: absolute;
@@ -244,9 +241,6 @@ nav {
     top: 60px;
     left: 0;
     border-radius: 20px;
-    // position: relative;
-    // filter: blur(8px);
-    // -webkit-filter: blur(8px);
     background: transparent;
 
     &:not(.searchField)::before {
@@ -311,7 +305,6 @@ nav {
     &.prePaidCards {
       a {
         flex-direction: column;
-
       }
     }
   }
@@ -408,7 +401,7 @@ nav {
   .nav-dropdown {
     position: static;
 
-    & .subCategory{
+    & .subCategory {
       background: linear-gradient(to left, #324248 0%, #625A56 50%)
     }
   }
@@ -468,8 +461,9 @@ nav {
     align-items: end;
   }
 }
+
 @media screen and (max-width: 550px) {
   .nav-dropdown .subCategory {
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
 }
