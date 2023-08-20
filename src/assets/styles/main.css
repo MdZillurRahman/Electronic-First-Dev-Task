@@ -18,15 +18,18 @@ body {
   align-items: center;
 }
 .nav-container .cartIcon {
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   margin-right: 20px;
+  margin-top: -10px;
+  position: relative;
 }
 .nav-container .cartIcon img {
   width: 25px;
   height: 25px;
+}
+.nav-container .cartIcon .cartItems {
+  color: #fff;
+  position: absolute;
+  top: -10px;
 }
 
 .brand {
@@ -65,15 +68,17 @@ nav ul.lower-part {
   background: linear-gradient(to left, #1E2226 50%, #000000 100%);
   border-radius: 25px;
 }
-nav ul li {
-  position: relative;
-}
 nav ul li a {
-  display: block;
   padding: 0px 20px;
   line-height: 50px;
   color: #fff;
   text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+nav ul li a svg {
+  margin-right: 5px;
+  fill: #ffffff;
 }
 nav ul li a:not(:only-child):after {
   padding-left: 4px;
@@ -189,16 +194,18 @@ nav .nav-dropdown.searchField .crossButton:after {
   z-index: 1;
   box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
 }
-
 .nav-dropdown.show {
   display: block;
+  width: 100%;
+  top: 60px;
+  left: 0;
 }
 
 .nav-mobile {
   display: none;
   position: absolute;
   top: 0;
-  right: 0;
+  right: 35px;
   background: #000;
   height: 70px;
   width: 70px;
@@ -210,6 +217,61 @@ nav .nav-dropdown.searchField .crossButton:after {
   aspect-ratio: 16/9;
 }
 
+@media only screen and (max-width: 799px) {
+  nav {
+    width: 100%;
+    padding: 70px 0 15px;
+  }
+  nav .nav-mobile {
+    display: block;
+  }
+  nav .nav-mobile p.searchIcon {
+    position: absolute;
+    top: -5px;
+    right: 60px;
+    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  nav ul {
+    display: none;
+  }
+  nav ul.upperPart {
+    display: none;
+  }
+  nav ul.active {
+    display: block;
+    position: absolute;
+    right: 0;
+    background-color: #000;
+    border-radius: 0;
+  }
+  nav ul li a {
+    padding: 15px;
+    line-height: 20px;
+  }
+  nav ul li ul li a {
+    padding-left: 30px;
+  }
+  nav .searchIcon {
+    display: none;
+  }
+  nav .nav-dropdown.searchField.show {
+    display: none;
+  }
+  nav .nav-dropdown.searchField.mobile-search.show {
+    position: absolute;
+    display: block;
+    top: 70px;
+    height: 50px;
+    width: 90%;
+    margin-top: 10px;
+  }
+  .nav-dropdown {
+    position: static;
+  }
+}
 #nav-toggle {
   position: absolute;
   left: 18px;
@@ -224,7 +286,7 @@ nav .nav-dropdown.searchField .crossButton:after {
   border-radius: 1px;
   height: 5px;
   width: 35px;
-  background: #f8b500;
+  background: #FF461C;
   position: absolute;
   display: block;
   content: "";
@@ -247,4 +309,12 @@ nav .nav-dropdown.searchField .crossButton:after {
 }
 #nav-toggle.active span:after {
   transform: rotate(-45deg);
+}
+
+@media screen and (min-width: 799px) {
+  .nav-list {
+    display: flex;
+    justify-content: center;
+    align-items: end;
+  }
 }/*# sourceMappingURL=main.css.map */

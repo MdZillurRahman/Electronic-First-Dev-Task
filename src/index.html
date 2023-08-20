@@ -21,7 +21,12 @@
           /></a>
         </div>
         <nav>
-
+          <div class="nav-mobile">
+            <p class="searchIcon">
+              <i class="fa fa-search"></i>
+            </p>
+            <a id="nav-toggle" href="#!"><span></span></a>
+          </div>
           <div class="middleNav">
             <ul class="upperPart">
               <li>Trending</li>
@@ -31,7 +36,18 @@
             </ul>
             <ul class="nav-list lower-part">
               <li>
-                <a href="#!">PC</a>
+                <a href="#!" >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    height="1em"
+                    viewBox="0 0 576 512"
+                  >
+                    <path
+                      d="M64 0C28.7 0 0 28.7 0 64V352c0 35.3 28.7 64 64 64H240l-10.7 32H160c-17.7 0-32 14.3-32 32s14.3 32 32 32H416c17.7 0 32-14.3 32-32s-14.3-32-32-32H346.7L336 416H512c35.3 0 64-28.7 64-64V64c0-35.3-28.7-64-64-64H64zM512 64V288H64V64H512z"
+                    />
+                  </svg>
+                    PC
+                </a>
                 <ul class="nav-dropdown">
                   <li><a href="#!">Web Design</a></li>
                   <li><a href="#!">Web Development</a></li>
@@ -39,7 +55,15 @@
                 </ul>
               </li>
               <li>
-                <a href="#!">Playstation</a>
+                <a href="#!"><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    height="1em"
+                    viewBox="0 0 576 512"
+                  >
+                    <path
+                      d="M64 0C28.7 0 0 28.7 0 64V352c0 35.3 28.7 64 64 64H240l-10.7 32H160c-17.7 0-32 14.3-32 32s14.3 32 32 32H416c17.7 0 32-14.3 32-32s-14.3-32-32-32H346.7L336 416H512c35.3 0 64-28.7 64-64V64c0-35.3-28.7-64-64-64H64zM512 64V288H64V64H512z"
+                    />
+                  </svg>Playstation</a>
                 <ul class="nav-dropdown">
                   <li><a href="#!">Web Design</a></li>
                   <li><a href="#!">Web Development</a></li>
@@ -47,7 +71,15 @@
                 </ul>
               </li>
               <li>
-                <a href="#!">XBOX</a>
+                <a href="#!"><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    height="1em"
+                    viewBox="0 0 576 512"
+                  >
+                    <path
+                      d="M64 0C28.7 0 0 28.7 0 64V352c0 35.3 28.7 64 64 64H240l-10.7 32H160c-17.7 0-32 14.3-32 32s14.3 32 32 32H416c17.7 0 32-14.3 32-32s-14.3-32-32-32H346.7L336 416H512c35.3 0 64-28.7 64-64V64c0-35.3-28.7-64-64-64H64zM512 64V288H64V64H512z"
+                    />
+                  </svg>XBOX</a>
                 <ul class="nav-dropdown">
                   <li><a href="#!">Web Design</a></li>
                   <li><a href="#!">Web Development</a></li>
@@ -55,7 +87,15 @@
                 </ul>
               </li>
               <li>
-                <a href="#!">Nintendo</a>
+                <a href="#!"><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    height="1em"
+                    viewBox="0 0 576 512"
+                  >
+                    <path
+                      d="M64 0C28.7 0 0 28.7 0 64V352c0 35.3 28.7 64 64 64H240l-10.7 32H160c-17.7 0-32 14.3-32 32s14.3 32 32 32H416c17.7 0 32-14.3 32-32s-14.3-32-32-32H346.7L336 416H512c35.3 0 64-28.7 64-64V64c0-35.3-28.7-64-64-64H64zM512 64V288H64V64H512z"
+                    />
+                  </svg>Nintendo</a>
                 <ul class="nav-dropdown">
                   <li><a href="#!">Web Design</a></li>
                   <li><a href="#!">Web Development</a></li>
@@ -81,12 +121,33 @@
               </li>
             </ul>
           </div>
-
+          <div class="nav-dropdown searchField mobile-search">
+            <div class="advancedSearch">
+              <input
+                type="text"
+                name="search"
+                id="searchFieldMobile"
+                placeholder="Minecraft, RPG, multiplayer..."
+              />
+              <button class="searchButton">Advanced Search</button>
+            </div>
+            <div class="crossButton"></div>
+          </div>
         </nav>
 
         <div class="cartIcon">
           <img src="https://i.ibb.co/nML8y6V/cart-Images.png" alt="" />
+          <span class="cartItems">0</span>
         </div>
+      </div>
+    </section>
+
+    <section class="bannarImage">
+      <div>
+        <img
+          src="https://i.ibb.co/nbNp0FK/Cover-Photo.webp"
+          alt="Bannar Image"
+        />
       </div>
     </section>
 

@@ -3,7 +3,7 @@ $breakpoint: 799px;
 $nav-height: 70px;
 $nav-background: #000;
 $nav-font-color: #fff;
-$link-hover-color: #f8b500;
+$link-hover-color: #FF461C;
 
 @import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
 
@@ -25,15 +25,19 @@ body {
   align-items: center;
 
   .cartIcon {
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     margin-right: 20px;
+    margin-top: -10px;
+    position: relative;
 
     img {
       width: 25px;
       height: 25px;
+    }
+
+    & .cartItems {
+      color: $nav-font-color;
+      position: absolute;
+      top: -10px;
     }
   }
 }
@@ -80,14 +84,19 @@ nav {
 
 
     li {
-      position: relative;
 
       a {
-        display: block;
         padding: 0px 20px;
         line-height: 50px;
         color: $nav-font-color;
         text-decoration: none;
+        display: flex;
+        align-items: center;
+
+        & svg {
+          margin-right: 5px;
+          fill: #ffffff;
+        }
 
         &:not(:only-child):after {
           padding-left: 4px;
@@ -140,7 +149,7 @@ nav {
     &.show {
       display: block;
 
-      &.mobile-search{
+      &.mobile-search {
         display: none;
       }
     }
@@ -226,32 +235,106 @@ nav {
   position: absolute;
   z-index: 1;
   box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
+
+  &.show {
+    display: block;
+    width: 100%;
+    top: 60px;
+    left: 0;
+  }
 }
 
-.nav-dropdown.show {
-  display: block;
-}
 
 .nav-mobile {
   display: none;
   position: absolute;
   top: 0;
-  right: 0;
+  right: 35px;
   background: $nav-background;
   height: $nav-height;
   width: $nav-height;
 }
 
-.bannarImage{
+.bannarImage {
 
-  img{
+  img {
     width: 100%;
     height: 100%;
     aspect-ratio: 16/9;
   }
 }
 
+@media only screen and (max-width: $breakpoint) {
 
+  nav {
+    width: 100%;
+    padding: $nav-height 0 15px;
+
+    .nav-mobile {
+      display: block;
+
+      & p.searchIcon {
+        position: absolute;
+        top: -5px;
+        right: 60px;
+        display: block;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+
+    ul {
+      display: none;
+
+      &.upperPart {
+        display: none;
+      }
+
+      &.active {
+        display: block;
+        position: absolute;
+        right: 0;
+        background-color: $nav-background;
+        border-radius: 0;
+      }
+
+      li {
+
+        a {
+          padding: 15px;
+          line-height: 20px;
+        }
+
+        ul li a {
+          padding-left: 30px;
+        }
+      }
+
+    }
+
+    & .searchIcon {
+      display: none;
+    }
+
+    & .nav-dropdown.searchField.show {
+      display: none;
+    }
+
+    & .nav-dropdown.searchField.mobile-search.show {
+      position: absolute;
+      display: block;
+      top: 70px;
+      height: 50px;
+      width: 90%;
+      margin-top: 10px;
+    }
+  }
+
+  .nav-dropdown {
+    position: static;
+  }
+}
 
 #nav-toggle {
   position: absolute;
@@ -300,3 +383,10 @@ nav {
   }
 }
 
+@media screen and (min-width: $breakpoint) {
+  .nav-list {
+    display: flex;
+    justify-content: center;
+    align-items: end;
+  }
+}
