@@ -3,6 +3,7 @@
 body {
   font-family: "Poppins";
   margin: 0;
+  background-color: #000;
 }
 
 .navigation {
@@ -135,6 +136,7 @@ nav .nav-dropdown.searchField .advancedSearch input {
   border: none;
   width: 100%;
   background: transparent;
+  color: #fff;
 }
 nav .nav-dropdown.searchField .advancedSearch input:focus {
   caret-color: white;
@@ -199,6 +201,62 @@ nav .nav-dropdown.searchField .crossButton:after {
   width: 100%;
   top: 60px;
   left: 0;
+  border-radius: 20px;
+  background: transparent;
+}
+.nav-dropdown.show:not(.searchField)::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  z-index: -1;
+}
+.nav-dropdown li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 15px;
+}
+.nav-dropdown li.category {
+  padding: 10px;
+  border-radius: 5px;
+  background: linear-gradient(to left, #56524E 0%, #132026 100%);
+}
+.nav-dropdown li.category .categoryName {
+  margin: 0;
+  color: #fff;
+}
+.nav-dropdown li.category .viewAllButton {
+  border: none;
+  background: transparent;
+  color: #fff;
+}
+.nav-dropdown .subCategory {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin: 15px;
+  padding-left: 15px;
+}
+.nav-dropdown .subCategory p {
+  min-width: 100px;
+}
+.nav-dropdown .subCategory p img {
+  width: 30px;
+  border-radius: 50%;
+}
+.nav-dropdown .subCategory p a {
+  display: block;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.nav-dropdown .subCategory.prePaidCards a {
+  flex-direction: column;
 }
 
 .nav-mobile {
@@ -246,6 +304,7 @@ nav .nav-dropdown.searchField .crossButton:after {
     right: 0;
     background-color: #000;
     border-radius: 0;
+    width: 100%;
   }
   nav ul li a {
     padding: 15px;
@@ -270,6 +329,9 @@ nav .nav-dropdown.searchField .crossButton:after {
   }
   .nav-dropdown {
     position: static;
+  }
+  .nav-dropdown .subCategory {
+    background: linear-gradient(to left, #324248 0%, #625A56 50%);
   }
 }
 #nav-toggle {
@@ -316,5 +378,10 @@ nav .nav-dropdown.searchField .crossButton:after {
     display: flex;
     justify-content: center;
     align-items: end;
+  }
+}
+@media screen and (max-width: 550px) {
+  .nav-dropdown .subCategory {
+    grid-template-columns: repeat(2, 1fr);
   }
 }/*# sourceMappingURL=main.css.map */
