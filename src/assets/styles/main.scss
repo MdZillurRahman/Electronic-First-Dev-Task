@@ -3,7 +3,8 @@ $breakpoint: 799px;
 $nav-height: 70px;
 $nav-background: #000;
 $nav-font-color: #fff;
-$link-hover-color: #FF461C;
+$link-hover-color: #67747666;
+$mobile-menu-color: #FF461C;
 
 @import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
 
@@ -29,6 +30,7 @@ body {
     margin-right: 20px;
     margin-top: -10px;
     position: relative;
+    cursor: pointer;
 
     img {
       width: 25px;
@@ -124,7 +126,7 @@ nav {
   & .searchIcon {
     width: 50px;
     height: 50px;
-    background-color: #FF461C;
+    background-color: $mobile-menu-color;
     border: 0;
     border-radius: 50%;
     display: flex;
@@ -215,6 +217,7 @@ nav {
         height: 33px;
         width: 2px;
         background-color: #FEB27F;
+        cursor: pointer;
       }
 
       &:before {
@@ -275,6 +278,7 @@ nav {
         border: none;
         background: transparent;
         color: $nav-font-color;
+        cursor: pointer;
       }
     }
   }
@@ -285,8 +289,10 @@ nav {
     margin: 15px;
     padding-left: 15px;
 
+
     & p {
       min-width: 100px;
+      margin-right: 5px;
 
       img {
         width: 30px;
@@ -299,6 +305,12 @@ nav {
         display: flex;
         align-items: center;
         gap: 5px;
+        padding-left: 5px;
+
+        &:hover {
+          background: $link-hover-color;
+          border-radius: 25px;
+        }
       }
     }
 
@@ -421,7 +433,7 @@ nav {
     border-radius: 1px;
     height: 5px;
     width: 35px;
-    background: $link-hover-color;
+    background: $mobile-menu-color;
     position: absolute;
     display: block;
     content: '';

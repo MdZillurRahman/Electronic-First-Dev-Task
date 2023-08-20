@@ -22,6 +22,7 @@ body {
   margin-right: 20px;
   margin-top: -10px;
   position: relative;
+  cursor: pointer;
 }
 .nav-container .cartIcon img {
   width: 25px;
@@ -183,6 +184,7 @@ nav .nav-dropdown.searchField .crossButton:before, nav .nav-dropdown.searchField
   height: 33px;
   width: 2px;
   background-color: #FEB27F;
+  cursor: pointer;
 }
 nav .nav-dropdown.searchField .crossButton:before {
   transform: rotate(45deg);
@@ -235,6 +237,7 @@ nav .nav-dropdown.searchField .crossButton:after {
   border: none;
   background: transparent;
   color: #fff;
+  cursor: pointer;
 }
 .nav-dropdown .subCategory {
   display: grid;
@@ -244,6 +247,7 @@ nav .nav-dropdown.searchField .crossButton:after {
 }
 .nav-dropdown .subCategory p {
   min-width: 100px;
+  margin-right: 5px;
 }
 .nav-dropdown .subCategory p img {
   width: 30px;
@@ -255,6 +259,11 @@ nav .nav-dropdown.searchField .crossButton:after {
   display: flex;
   align-items: center;
   gap: 5px;
+  padding-left: 5px;
+}
+.nav-dropdown .subCategory p a:hover {
+  background: rgba(103, 116, 118, 0.4);
+  border-radius: 25px;
 }
 .nav-dropdown .subCategory.prePaidCards a {
   flex-direction: column;
